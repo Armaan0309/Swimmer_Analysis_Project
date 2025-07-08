@@ -66,6 +66,7 @@ pip install Flask pandas matplotlib scikit-learn numpy
 Repository Structure
 Your repository should ideally have a structure similar to this:
 
+```bash
 largeFiles/
 ├── .gitattributes
 ├── README.md
@@ -73,6 +74,7 @@ largeFiles/
 ├── app.py          # Your main application code
 └── templates/
     └── index.html  # Your HTML template for the web interface
+```
 Note: The swimmer_data.zip file is expected to contain .txt files with swimmer data as described in the "Data Ingestion" section above. After downloading and extracting swimmer_data.zip, the .txt files should be accessible by the app.py script.
 
 Running the Application
