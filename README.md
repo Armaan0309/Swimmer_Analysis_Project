@@ -1,6 +1,8 @@
 # Swimmer Performance Analyzer
 ## Project Overview
 
+### Note: The project files are quite large, so they've been compressed into a .zip file for easier downloading and to keep the repository size manageable. You'll need to extract this zip file to access the individual data files required by the application.
+
 
 Welcome to the Swimmer Performance Analyzer! This project provides a web-based application to analyze swimmer performance data, visualize key metrics, and offer personalized recommendations for improvement. By processing raw lap time data, our system helps swimmers, coaches, and enthusiasts gain insights into performance trends, pacing consistency, and even predicts future race times.
 
