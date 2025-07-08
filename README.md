@@ -28,11 +28,11 @@ The application is built using Flask for the web framework, Pandas for data mani
 
 2 Data Analysis:
 
-    - parse_time() converts lap time strings into total seconds.
+   - parse_time() converts lap time strings into total seconds.
 
-    - calculate_velocity() determines the swimmer's speed.
+   - calculate_velocity() determines the swimmer's speed.
 
-analyze_swimmer() is the core function that:
+   - analyze_swimmer() is the core function that:
 
 Filters data for a specific swimmer.
 
