@@ -4,33 +4,33 @@
 
 Welcome to the Swimmer Performance Analyzer! This project provides a web-based application to analyze swimmer performance data, visualize key metrics, and offer personalized recommendations for improvement. By processing raw lap time data, our system helps swimmers, coaches, and enthusiasts gain insights into performance trends, pacing consistency, and even predicts future race times.
 
-Features
-Data Processing: Automatically extracts swimmer data (name, age, distance, stroke, lap times) from text files.
+## Features
+* Data Processing: Automatically extracts swimmer data (name, age, distance, stroke, lap times) from text files.
 
-Performance Metrics: Calculates essential metrics such as total race time, average lap time, velocity, and estimated heart rate during races.
+* Performance Metrics: Calculates essential metrics such as total race time, average lap time, velocity, and estimated heart rate during races.
 
-Interactive Visualizations: Generates insightful plots including:
+* Interactive Visualizations: Generates insightful plots including:
 
-Total Race Times: Tracks a swimmer's performance across multiple races.
+    * Total Race Times: Tracks a swimmer's performance across multiple races.
 
-Average Lap Times by Distance and Stroke: Breaks down lap times based on different distances and strokes, helping identify strengths and areas for improvement.
+    * Average Lap Times by Distance and Stroke: Breaks down lap times based on different distances and strokes, helping identify strengths and areas for improvement.
 
-Performance Prediction: Utilizes linear regression to predict a swimmer's total time for their next race.
+* Performance Prediction: Utilizes linear regression to predict a swimmer's total time for their next race.
 
-Personalized Recommendations: Provides actionable advice based on lap time consistency, velocity, heart rate analysis, and predicted performance changes.
+* Personalized Recommendations: Provides actionable advice based on lap time consistency, velocity, heart rate analysis, and predicted performance changes.
 
-Web Interface: A user-friendly Flask web application to display analysis results and visualizations.
+* Web Interface: A user-friendly Flask web application to display analysis results and visualizations.
 
-How It Works
+## How It Works
 The application is built using Flask for the web framework, Pandas for data manipulation, and Matplotlib and NumPy for data visualization and numerical operations. Scikit-learn is used for the linear regression model.
 
-Data Ingestion: The process_files() function scans a specified directory for .txt files. Each file is expected to be named in the format SwimmerName-Age-DistanceStroke.txt (e.g., JohnDoe-18-100mFreestyle.txt) and contain comma-separated lap times in minutes:seconds format.
+1 Data Ingestion: The process_files() function scans a specified directory for .txt files. Each file is expected to be named in the format SwimmerName-Age-DistanceStroke.txt (e.g., JohnDoe-18-100mFreestyle.txt) and contain comma-separated lap times in minutes:seconds format.
 
-Data Analysis:
+2 Data Analysis:
 
-parse_time() converts lap time strings into total seconds.
+    - parse_time() converts lap time strings into total seconds.
 
-calculate_velocity() determines the swimmer's speed.
+    - calculate_velocity() determines the swimmer's speed.
 
 analyze_swimmer() is the core function that:
 
