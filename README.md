@@ -34,36 +34,37 @@ The application is built using Flask for the web framework, Pandas for data mani
 
    - analyze_swimmer() is the core function that:
 
-Filters data for a specific swimmer.
+   - Filters data for a specific swimmer.
 
-Calculates average lap times and other key metrics.
+   - Calculates average lap times and other key metrics.
 
-Generates two plots: total race times over races and average lap times by distance and stroke.
+   - Generates two plots: total race times over races and average lap times by distance and stroke.
 
-Performs linear regression on total race times to predict future performance.
+   - Performs linear regression on total race times to predict future performance.
 
-Estimates heart rate based on age and distance.
+   - Estimates heart rate based on age and distance.
 
-Formulates general and metric-specific recommendations.
+   - Formulates general and metric-specific recommendations.
 
-Web Presentation:
+3 Web Presentation:
 
-The Flask application serves an index.html template (which would be in your templates folder).
+   - The Flask application serves an index.html template (which would be in your templates folder).
 
-When a swimmer's data is requested via the /swimmer/<name> route, the analyze_swimmer function is called, and the results (including base64 encoded plot images, metrics, and recommendations) are returned as a JSON response.
+   - When a swimmer's data is requested via the /swimmer/<name> route, the analyze_swimmer function is called, and the results (including base64 encoded plot images, metrics, and recommendations) are returned as a JSON response.
 
-Getting Started
-To run this application, follow these steps:
+## Getting Started
+   - To run this application, follow these steps:
 
-Prerequisites
+## Prerequisites
 Make sure you have Python installed (Python 3.7+ is recommended).
 
 You'll need the following Python libraries. You can install them using pip:
 
-Bash
+```Bash
 
 pip install Flask pandas matplotlib scikit-learn numpy
-Repository Structure
+```
+## Repository Structure
 Your repository should ideally have a structure similar to this:
 
 ```bash
@@ -77,32 +78,33 @@ largeFiles/
 ```
 Note: The swimmer_data.zip file is expected to contain .txt files with swimmer data as described in the "Data Ingestion" section above. After downloading and extracting swimmer_data.zip, the .txt files should be accessible by the app.py script.
 
-Running the Application
-Download and Extract Data: Download the swimmer_data.zip file from this repository and extract its contents into the same directory as your app.py file. These extracted .txt files are crucial for the application to function.
+## Running the Application
+1 Download and Extract Data: Download the swimmer_data.zip file from this repository and extract its contents into the same directory as your app.py file. These extracted .txt files are crucial for the application to function.
 
-Navigate to the Project Directory:
+2 Navigate to the Project Directory:
 
-Bash
+```Bash
+cd Swimmer_Analysis_Project
+```
+3 Run the Flask Application:
 
-cd largeFiles
-Run the Flask Application:
-
-Bash
-
+```Bash
 python app.py
-Access the Application: Once the application is running (you'll see a message like * Running on http://127.0.0.1:5000/), open your web browser and go to:
+```
 
-http://127.0.0.1:5000/ to access the main page (assuming you have index.html).
+4 Access the Application: Once the application is running (you'll see a message like * Running on http://127.0.0.1:5000/), open your web browser and go to:
 
-To see specific swimmer data, you can append the swimmer's name (e.g., http://127.0.0.1:5000/swimmer/JohnDoe if "JohnDoe" is a swimmer in your data).
+   - http://127.0.0.1:5000/ to access the main page (assuming you have index.html).
 
-How to Interact
+   - To see specific swimmer data, you can append the swimmer's name (e.g., http://127.0.0.1:5000/swimmer/JohnDoe if "JohnDoe" is a swimmer in your data).
+
+## How to Interact
 Once the application is running, you can interact with it by entering the swimmer's name into the appropriate field on the web interface (if index.html provides one) or directly accessing the /swimmer/<name> endpoint in your browser or through tools like Postman.
 
 The application will then display:
 
-Performance Plots: Visual graphs of total race times and average lap times.
+   - Performance Plots: Visual graphs of total race times and average lap times.
 
-Key Metrics: Numerical values for total time, average lap time, velocity, distance, predicted time, and heart rate.
+   - Key Metrics: Numerical values for total time, average lap time, velocity, distance, predicted time, and heart rate.
 
-Recommendations: Personalized advice to help the swimmer improve their performance.
+   - Recommendations: Personalized advice to help the swimmer improve their performance.
